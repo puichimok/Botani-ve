@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Botaniève 精選選物館</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/selection_style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="padding-top: 210px">
+<div class="topbar fixed-top">
+	<header class="logo-header bg-light">
+  <a href="index.html" class="navbar-brand">
+    <img src="images/Logo.svg" alt="">
+  </a>
+  <div class="cart-icon"><img src="images/cart-fill.svg" alt="cart icon"></div>
+</header>
+	<nav class="navbar navbar-light navbar-expand-lg bg-light">
+    <div class="container d-flex justify-content-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> 
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent1">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">關於我們</a>
+		  	<div class="dropdown-menu .dropdown-menu-dark " aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-story">品牌故事</a> 
+				<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-philosophy">品牌理念</a>
+              	<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-manifesto">品牌宣言</a>
+			</div>
+		  </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="news.html" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">最新動向</a>
+		  	<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item" href="monthly.html">本月優惠</a> 
+				<a class="dropdown-item" href="brand-events.html">品牌活動</a>
+				<a class="dropdown-item" href="new-items.html">新品優惠</a>
+				<a class="dropdown-item" href="seasonal.html">季節優惠</a>
+			</div>
+		  </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="selection.html" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 精選選物館 </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item" href="#">面部護理</a> 
+				<a class="dropdown-item" href="#">身體護理</a>
+              	<a class="dropdown-item" href="#">頭發護理</a>
+				<a class="dropdown-item" href="#">化妝品</a>
+			</div>
+          </li>
+          <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="brands.html">代理品牌</a> </li>
+		  <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="contact.html">聯絡我們</a> </li>
+        </ul>
+      </div>
+	  </div>
+	</nav>
+</div>		
+<section id="selection-hero">
+  <div class="selection-hero-bg d-flex align-items-center justify-content-center">
+    <div class="selection-hero-content text-center">
+      <h1 class="selection-hero-title">精選選物館 Products</h1>
+		<br>
+      <p class="selection-hero-sub">為生活挑選更純粹的好物，讓日常回到最舒適的節奏。</p>
+    </div>
+  </div>
+</section>
+  <!-- ===== 精選選物館：分頁區 ===== -->
+  <section class="selection-header py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- 右：排序選單 -->
+        <div class="col-md-3 text-md-left">
+          <select class="custom-select custom-select-sm w-auto">
+            <option selected>排序：預設</option>
+            <option value="1">價格由低到高</option>
+            <option value="2">價格由高到低</option>
+            <option value="3">新品優先</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 主內容：Filter + 商品列表 ===== -->
+  <section class="selection-content py-4">
+    <div class="container">
+      <div class="row">
+        <!-- 左欄：Filter（手機可收合） -->
+	<aside class="col-12 col-md-3 mb-4">
+ 	 <!-- 手機版：收合按鈕（md 以上隱藏） -->
+ 	 <button class="btn btn-outline-secondary btn-block d-md-none mb-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#filterCollapse"
+          aria-expanded="false"
+          aria-controls="filterCollapse">篩選條件 Filter
+  	</button>
+
+  		<!-- 收合內容：md 以上維持顯示 -->
+  	<div id="filterCollapse" class="collapse show d-md-block">
+    <div class="filter-panel p-3">
+      <h5 class="h6 mb-3">Filter</h5>
+
+      <!-- 肌膚需求 -->
+      <div class="filter-group mb-3">
+        <h6 class="small font-weight-bold">肌膚需求</h6>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="need1">
+          <label class="custom-control-label small" for="need1">保濕補水</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="need2">
+          <label class="custom-control-label small" for="need2">舒緩修復</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="need3">
+          <label class="custom-control-label small" for="need3">抗痘淨膚</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="need4">
+          <label class="custom-control-label small" for="need4">提亮膚色</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- 膚質 -->
+      <div class="filter-group mb-3">
+        <h6 class="small font-weight-bold">護膚品</h6>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="product1">
+          <label class="custom-control-label small" for="product1">唇膏</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="product2">
+          <label class="custom-control-label small" for="product2">面膜</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="product3">
+          <label class="custom-control-label small" for="product3">精華</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="product4">
+          <label class="custom-control-label small" for="product4">面霜</label>
+        </div>
+      </div>
+
+      <hr>
+      <!-- 膚質 -->
+      <div class="filter-group mb-3">
+        <h6 class="small font-weight-bold">膚質</h6>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="skin1">
+          <label class="custom-control-label small" for="skin1">乾性肌</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="skin2">
+          <label class="custom-control-label small" for="skin2">油性肌</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="skin3">
+          <label class="custom-control-label small" for="skin3">混合肌</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="skin4">
+          <label class="custom-control-label small" for="skin4">敏感肌</label>
+        </div>
+      </div>
+
+      <hr>
+      <!-- 價格區間 -->
+      <div class="filter-group mb-3">
+        <h6 class="small font-weight-bold">價格區間</h6>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" name="price" id="price1">
+          <label class="custom-control-label small" for="price1">$200 - $500</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" name="price" id="price2">
+          <label class="custom-control-label small" for="price2">$500 - $1000</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" name="price" id="price3">
+          <label class="custom-control-label small" for="price3">$1000+</label>
+        </div>
+      </div>
+
+      <button id="btnClearFilters" class="btn btn-sm btn-outline-secondary btn-block mt-3">
+        清除篩選
+      </button>
+    </div>
+  </div>
+</aside>
+
+        <!-- 右欄：商品卡片 + 分頁內容 -->
+        <div class="col-md-9">
+          <div class="tab-content">
+            <!-- 面部護理 -->
+            <div class="tab-pane fade show active" id="face" role="tabpanel">
+              <div class="row">
+                <!-- 商品卡片範例 1 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <!-- 先用灰色示意圖，之後換成真實商品照 -->
+                      <img src="images/水光保濕精華.jpg" class="card-img-top" alt="水光保濕精華">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">水嫰彈性</span>
+                      <h5 class="card-title h6 mb-1">水光保濕精華</h5>
+                      <p class="card-text small text-muted mb-2">刺激膠原蛋白·水嫰光彩</p>
+                      <p class="font-weight-bold mb-2">$980</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 商品卡片範例 2 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/積雪草舒緩修復面膜.jpg" class="card-img-top" alt="積雪草舒緩修復面膜">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">晚安修護</span>
+                      <h5 class="card-title h6 mb-1">積雪草舒緩修復面膜</h5>
+                      <p class="card-text small text-muted mb-2">夜間修護 · 滋養保濕</p>
+                      <p class="font-weight-bold mb-2">$2,080</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 商品卡片範例 3 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/The One全能修護面霜.jpg" class="card-img-top" alt="The One全能修護面霜">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">晚安修護</span>
+                      <h5 class="card-title h6 mb-1">The One全能修護面霜</h5>
+                      <p class="card-text small text-muted mb-2">1支滿足8個功能性需要</p>
+                      <p class="font-weight-bold mb-2">$2,880</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				  
+                <!-- 商品卡片範例 4 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/麥盧卡蜂蜜舒緩淨化洗髮露.jpg" class="card-img-top" alt="麥盧卡蜂蜜舒緩淨化洗髮露">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">舒緩淨化</span>
+                      <h5 class="card-title h6 mb-1">麥盧卡蜂蜜舒緩淨化洗髮露</h5>
+                      <p class="card-text small text-muted mb-2">無添加花水、精油等香味成分</p>
+                      <p class="font-weight-bold mb-2">$1,000</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				<!-- 商品卡片範例 5 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/輕透防水抗汗物理防曬乳.jpg" class="card-img-top" alt="輕透防水抗汗物理防曬乳">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">持久抗水</span>
+                      <h5 class="card-title h6 mb-1">輕透防水抗汗物理防曬乳</h5>
+                      <p class="card-text small text-muted mb-2">無添加花水、精油·香味成分</p>
+                      <p class="font-weight-bold mb-2">$1,260</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				<!-- 商品卡片範例 6 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/天然礦物持色奶油唇膏.jpg" class="card-img-top" alt="天然礦物持色奶油唇膏">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">純素配方</span>
+                      <h5 class="card-title h6 mb-1">天然礦物持色奶油唇膏</h5>
+                      <p class="card-text small text-muted mb-2">不含香精·顯色持久</p>
+                      <p class="font-weight-bold mb-2">$1,280</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				  
+				<!-- 商品卡片範例 7 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                    <img src="images/青瓜水潤潔面泡沫.jpg" class="card-img-top" alt="輕透防水抗汗物理防曬乳">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">敏感肌友善</span>
+                      <h5 class="card-title h6 mb-1">青瓜水潤潔面泡沫</h5>
+                      <p class="card-text small text-muted mb-2">溫和補水·舒緩乾燥肌</p>
+                      <p class="font-weight-bold mb-2">$960</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				 <!-- 商品卡片範例 8 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                      <img src="images/精雕眼霜.jpg" class="card-img-top" alt="輕透防水抗汗物理防曬乳">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">提亮眼部</span>
+                      <h5 class="card-title h6 mb-1">精雕眼霜</h5>
+                      <p class="card-text small text-muted mb-2">減少細紋、皺紋·恢復水分</p>
+                      <p class="font-weight-bold mb-2">$3,480</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+				 <!-- 商品卡片範例 9 -->
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card product-card h-100">
+                    <a href="#">
+                    <img src="images/滋養去角質蜜糖磨砂.jpg" class="card-img-top" alt="輕透防水抗汗物理防曬乳">
+                    </a>
+                    <div class="card-body">
+                      <span class="product-badge">溫和去角質</span>
+                      <h5 class="card-title h6 mb-1">滋養去角質蜜糖磨砂</h5>
+                      <p class="card-text small text-muted mb-2">滋養肌膚·煥發光彩</p>
+                      <p class="font-weight-bold mb-2">$1,400</p>
+                      <button class="btn btn-sm btn-dark btn-block">
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div> 
+				  
+				  
+              </div>
+            </div>
+  		</div>
+	</div>
+  </div>
+</div>
+</section>
+
+	<div class="container-fluid foot" id="foot">
+  <div class="row py-4">
+
+    <!-- 左：Contact 表單 -->
+    <div class="col-md-4 text-center">
+      <h4>Contact</h4>
+      <form>
+        <div class="form-group">
+          <input class="form-control" type="text" id="name" placeholder="username*">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" id="email" placeholder="xxxxx@example.com*">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="tel" id="phone" placeholder="09-xxxxxxxx*">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="Message" placeholder="Your Message*"></textarea>
+        </div>
+        <button type="button" class="btn btn-outline-secondary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- 中：社群 / 其他連結 -->
+    <div class="col-md-4 text-center d-flex flex-column align-items-center justify-content-center" id="social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+    <a href="#" target="_blank">
+      <img src="images/instagram.svg" alt="Instagram">
+    </a>
+    <a href="#" target="_blank">
+      <img src="images/facebook.svg" alt="Facebook">
+    </a>
+    <a href="#" target="_blank">
+      <img src="images/line.svg" alt="Line">
+    </a>
+  </div>
+      <p class="copyright mb-0">＠botanieve_official</p>
+    </div>
+
+    <!-- 右：品牌名稱與版權 -->
+    <div class="col-md-4 text-center text-md-right d-flex flex-column align-items-center align-items-md-end justify-content-center" id="copyright">
+      <h4>Botaniève</h4>
+      <p class="copyright mb-0">
+        Copyright &copy; 2025 Botaniève<br>
+        All Rights Reserved &middot; by Daphne Mok
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<script type="text/javascript" src="js/freelancer.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<script>$(document).ready(function () {
+  var isTouchDevice = 'ontouchstart' in document.documentElement;
+
+  // 桌機：滑過顯示 dropdown
+  if (!isTouchDevice) {
+    $('.navbar .dropdown').hover(
+      function () {
+        $(this).addClass('show');
+        $(this).find('.dropdown-menu').addClass('show');
+      },
+      function () {
+        $(this).removeClass('show');
+        $(this).find('.dropdown-menu').removeClass('show');
+      }
+    );
+  }
+
+  // 點擊「關於我們 / 最新優惠」這類 dropdown 主連結
+  $('.navbar .dropdown > a').on('click', function (e) {
+    var href = $(this).attr('href');
+
+    if ($(window).width() >= 450) {
+      // ✅ 桌機：直接導頁到主頁（aboutus.html / news.html）
+      e.preventDefault();
+      window.location = href;
+    } else {
+      // ✅ 手機：只展開 / 收合 dropdown，不馬上跳頁
+      e.preventDefault();
+      var $parent = $(this).parent();
+      $parent.toggleClass('show');
+      $parent.find('.dropdown-menu').toggleClass('show');
+    }
+  });
+});
+	
+	$('#btnClearFilters').on('click', function () {
+		// 只清 Filter 區塊裡的 input（避免影響整頁其他表單）
+		var $filterArea = $('#filterCollapse');
+
+		// 清掉 checkbox / radio
+		$filterArea.find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
+
+		// （可選）重設排序 select 回預設第一個
+		$('.selection-header select').prop('selectedIndex', 0);
+
+		// （可選）如果你之後有做「依篩選顯示商品」的函式，可在這裡呼叫更新
+		// applyFilters();
+	  });
+	    if ($(window).width() < 768) {
+      $('#filterCollapse').collapse('hide');
+    }
+</script>
+
+</body>
+</html>
