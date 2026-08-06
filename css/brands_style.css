@@ -1,0 +1,505 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* =========================
+   Base
+   ========================= */
+body{
+  background-color: #F7F6F3;
+  color: #7A6F60;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+
+/* =========================
+   Topbar / Header
+   ========================= */
+.topbar {
+  width: 100%;
+}
+
+.logo-header {
+  background-color: #E9ECE7;     /* 草本霧灰 */
+  text-align: center;
+  padding: 16px 0;
+  z-index: 1040;
+  position: relative;
+}
+
+.logo-header .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #7A6F60;
+}
+
+.logo-header .navbar-brand img {
+  display: block;
+  width: 110px;
+  height: auto;
+}
+
+.logo-header .navbar-brand span {
+  font-family: "Playfair Display","Noto Serif TC",serif;
+  font-size: 22px;
+  margin-left: 8px;
+}
+
+/* 你原本有改 bg-light：保留 */
+.bg-light{
+  background-color: #A9BCA3!important;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+.navbar {
+  background-color: #A9BCA3 !important;    /* 苔蘚綠 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  min-height: 50px;
+}
+
+.navbar-brand {
+  font-family: "Playfair Display","Noto Serif TC",serif;
+  font-size: 22px;
+  color: #F7F6F3 !important;              /* 月光白 */
+}
+
+.navbar-nav .nav-link {
+  color: #7A6F60 !important;              /* 植物根系棕 */
+  font-family: "Montserrat","Noto Sans TC",sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  letter-spacing: 0.04em;
+  position: relative;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #F7F6F3 !important;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #E4DAD3 !important;              /* 淡玫粉灰 */
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background-color: #F7F6F3;
+  transform: translateX(-50%);
+  transition: width .2s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+/* =========================
+   Dropdown
+   ========================= */
+.navbar .dropdown-menu {
+  background-color: #F7F6F3;       /* 月光白 */
+  border: none;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  margin-top: 8px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* 修正 hover 閃爍 */
+.navbar .dropdown-menu {
+  margin-top: 0;
+}
+
+.navbar .dropdown-item {
+  color: #7A6F60 !important;
+  font-size: 14px;
+  padding: 10px 18px;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #A0AE9E !important;
+  color: #F7F6F3 !important;
+  text-decoration: none;
+}
+
+.navbar .dropdown-item:active,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item.active {
+  color: #E4DAD3 !important;
+}
+
+/* =========================
+   Cart Icon
+   ========================= */
+.cart-icon {
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+
+  background: rgba(233,236,231,0.75);     /* E9ECE7 */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 50%;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3000;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+.cart-icon img {
+  width: 30px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* =========================
+   Hero
+   ========================= */
+.brands-hero-bg {
+  background-image: url("../images/Firefly_nature  no product 942137.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  padding: 100px 20px;
+}
+
+.brands-hero-title,
+.brands-hero-sub {
+  display: inline-block;
+  background: rgba(169,188,163,0.72);
+  color: #F7F6F3;
+  padding: 10px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  margin: 8px 0;
+}
+
+.brands-hero-title {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.brands-hero-sub {
+  font-size: 18px;
+}
+
+.brands-hero-title,
+.brands-hero-sub {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+.brands-hero-sub {
+  animation-delay: 0.18s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Brand Grid (統一版：A 極簡 / Botaniève)
+   ========================= */
+.brand-section{
+  background: transparent;
+  padding: 48px 0;
+}
+
+.brand-title{
+  color: #7A6F60;
+  letter-spacing: .06em;
+}
+
+/* 正方形卡片 */
+.brand-card{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 14px;
+
+  background: rgba(233,236,231,0.75);       /* #E9ECE7 霧面 */
+  border: 1px solid rgba(122,111,96,0.18);  /* #7A6F60 淡邊 */
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+
+  overflow: hidden;
+  text-decoration: none !important;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.brand-card:hover{
+  transform: translateY(-2px);
+  filter: brightness(0.92);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+.brand-card:active{
+  transform: translateY(0);
+  filter: brightness(0.86);
+}
+
+.brand-card .brand-logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 62%;
+  max-height: 62%;
+  object-fit: contain;
+  opacity: 0.92;
+}
+
+/* =========================
+   Brand Modal (統一版：A 極簡 / Botaniève)
+   ========================= */
+.brand-modal{
+  border-radius: 18px;
+  border: 1px solid rgba(122,111,96,0.16);
+  background: #F7F6F3;
+}
+
+.brand-modal .modal-header{
+  border-bottom: 1px solid rgba(122,111,96,0.12);
+  background: rgba(233,236,231,0.55);
+}
+
+.brand-modal .modal-title{
+  color: #7A6F60;
+  letter-spacing: .04em;
+}
+
+.brand-modal .modal-body{
+  color: #7A6F60;
+  line-height: 1.9;
+}
+
+.brand-modal .modal-body p{
+  margin-bottom: 12px;
+}
+
+.brand-modal-logoWrap{
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  border: 1px solid rgba(122,111,96,0.16);
+  background: rgba(247,246,243,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.brand-modal-logoWrap img{
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.brand-modal-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-tag{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: .03em;
+  color: #7A6F60;
+  background: rgba(233,236,231,0.75);
+  border: 1px solid rgba(122,111,96,0.14);
+}
+
+/* =========================
+   Forms / Misc
+   ========================= */
+.form-group-text{
+  height: 100%;
+  width: 100%;
+}
+
+#Message{
+  height: 100%;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 13px;
+}
+
+.foot {
+  background-color: #A9BCA3;
+  color: #7A6F60;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RWD (<= 991.98px / <= 767.98px)
+   ========================= */
+@media (max-width: 991.98px) {
+  .navbar .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .navbar .container {
+    justify-content: space-between !important;
+  }
+
+  .navbar-nav {
+    margin: 8px 0 4px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 8px 16px;
+    text-align: right !important;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: none !important;
+  }
+
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    content: none !important;
+  }
+
+  .navbar .dropdown-menu {
+    position: static !important;
+    width: auto !important;
+    min-width: 140px !important;
+    margin-top: 0;
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: right;
+  }
+
+  .navbar .dropdown-item {
+    width: 100%;
+    text-align: right;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .brands-hero-bg {
+    min-height: 260px;
+    height: auto;
+    padding: 40px 16px;
+    background-position: center;
+  }
+
+  .brands-hero-title {
+    font-size: 28px;
+    padding: 8px 18px;
+  }
+
+  .brands-hero-sub {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .brand-section{
+    padding: 36px 0;
+  }
+
+  .brand-section h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .brand-card {
+    border-radius: 12px;
+  }
+
+  .brand-card .brand-logo {
+    max-width: 56%;
+    max-height: 56%;
+  }
+
+  .brand-section .row > div {
+    margin-bottom: 1.2rem;
+  }
+
+  #social{
+    padding-top: 50px;
+  }
+
+  #copyright{
+    padding-top: 50px;
+  }
+
+  .cart-icon {
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .cart-icon img {
+    width: 25px;
+  }
+}

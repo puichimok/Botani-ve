@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>季節優惠 Seasonal Care</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <!-- 本頁專用樣式 -->
+  <link href="css/seasonal_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="padding-top:210px">
+
+<!-- ───── Topbar：Logo + Navbar ───── -->
+<div class="topbar fixed-top">
+  <header class="logo-header bg-light">
+    <a href="index.html" class="navbar-brand">
+      <img src="images/Logo.svg" alt="Botaniève Logo">
+    </a>
+	<div class="cart-icon"><img src="images/cart-fill.svg" alt="cart icon"></div>
+  </header>
+	<nav class="navbar navbar-light navbar-expand-lg bg-light">
+    <div class="container d-flex justify-content-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> 
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent1">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">關於我們</a>
+		  	<div class="dropdown-menu .dropdown-menu-dark " aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-story">品牌故事</a> 
+				<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-philosophy">品牌理念</a>
+              	<a class="dropdown-item js-scroll-trigger" href="aboutus.html#brand-manifesto">品牌宣言</a>
+			</div>
+		  </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="news.html" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">最新動向</a>
+		  	<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item" href="monthly.html">本月優惠</a> 
+				<a class="dropdown-item" href="brand-events.html">品牌活動</a>
+				<a class="dropdown-item" href="new-items.html">新品優惠</a>
+				<a class="dropdown-item" href="seasonal.html">季節優惠</a>
+			</div>
+		  </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="selection.html" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 精選選物館 </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item" href="#">面部護理</a> 
+				<a class="dropdown-item" href="#">身體護理</a>
+              	<a class="dropdown-item" href="#">頭發護理</a>
+				<a class="dropdown-item" href="#">化妝品</a>
+			</div>
+          </li>
+          <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="brands.html">代理品牌</a> </li>
+		  <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="contact.html">聯絡我們</a> </li>
+        </ul>
+      </div>
+	  </div>
+	</nav>
+</div>
+
+<!-- ───── Hero：季節優惠主題 ───── -->
+<section id="seasonal-hero">
+  <div class="seasonal-hero-bg d-flex align-items-center justify-content-center text-center">
+    <div class="seasonal-hero-content">
+      <h1 class="seasonal-hero-title">季節優惠 Seasonal Care</h1>
+	  <br>
+      <p class="seasonal-hero-sub">
+        順應四季節奏，為當下的肌膚選擇最溫柔的照顧方式。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 當季主打區（例如：冬季）───── -->
+<section id="season-current">
+  <div class="container">
+
+    <div class="row align-items-center season-current-row">
+
+      <!-- 當季圖片 -->
+      <div class="col-lg-6 season-current-img-wrap">
+        <img src="images/Firefly_冬季修護 · 深度保濕提案_保濕精華＋晚安修復面膜.jpg" class="season-current-img" alt="冬季修護主題">
+      </div>
+
+      <!-- 當季說明 -->
+      <div class="col-lg-6">
+        <div class="season-current-textbox">
+          <h2 class="season-current-title">冬季修護 · 深度保濕提案</h2>
+          <p class="season-current-desc">
+            冬季空氣乾燥、溫差明顯，肌膚容易緊繃、脫皮與泛紅。
+            我們以高保濕植萃成分結合滋養油脂，協助重建肌膚屏障，讓每一次護膚都像是一場暖光包覆。
+          </p>
+          <ul class="season-current-list">
+            <li>適合膚質：乾性肌、敏感肌、換季不穩定膚況。</li>
+            <li>主打成分：乳木果油、燕麥萃取、神經醯胺。</li>
+            <li>推薦搭配：保濕精華＋晚安修復面膜。</li>
+          </ul>
+          <a href="#" class="btn more-btn">查看冬季推薦組合</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───── 四季卡片區：春夏秋冬 2 欄卡片 ───── -->
+<section id="season-grid">
+  <div class="container">
+    <h2 class="season-grid-title text-center mb-4">四季養膚提案</h2>
+    <p class="season-grid-sub text-center mb-5">
+      依照春、夏、秋、冬的氣候變化，為不同膚況提供溫柔而有效的護膚建議。
+    </p>
+
+    <div class="row season-grid-row">
+
+      <!-- 春季卡片 -->
+      <div class="col-md-6">
+        <article class="season-card">
+          <div class="season-card-img-wrap">
+            <img src="images/Firefly_Spring · 春季保濕穩膚_舒緩精華 × 無酒精化妝水.jpg" class="season-card-img" alt="春季保濕修護">
+          </div>
+          <div class="season-card-body">
+            <h3 class="season-card-title">Spring · 春季保濕穩膚</h3>
+            <p class="season-card-desc">
+              春季溫度回暖，敏感與過敏狀況常見。以溫和保濕、舒緩鎮定為主，減少外界刺激。
+            </p>
+            <p class="season-card-tip">重點：舒緩精華 × 無酒精化妝水。</p>
+            <a href="#" class="season-card-link">查看春季推薦 →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 夏季卡片 -->
+      <div class="col-md-6">
+        <article class="season-card">
+          <div class="season-card-img-wrap">
+            <img src="images/Firefly_Summer · 夏季清爽控油_輕盈乳液 × 清爽凝凍.jpg" class="season-card-img" alt="夏季控油舒緩">
+          </div>
+          <div class="season-card-body">
+            <h3 class="season-card-title">Summer · 夏季清爽控油</h3>
+            <p class="season-card-desc">
+              高溫與出油讓毛孔容易堵塞，以控油平衡與清爽保濕為主，降低悶痘機率。
+            </p>
+            <p class="season-card-tip">重點：輕盈乳液 × 清爽凝凍。</p>
+            <a href="#" class="season-card-link">查看夏季推薦 →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 秋季卡片 -->
+      <div class="col-md-6">
+        <article class="season-card">
+          <div class="season-card-img-wrap">
+            <img src="images/Firefly_Autumn · 秋季油水平衡_滋養精華油 × 柔潤乳霜.jpg" class="season-card-img" alt="秋季油水平衡">
+          </div>
+          <div class="season-card-body">
+            <h3 class="season-card-title">Autumn · 秋季油水平衡</h3>
+            <p class="season-card-desc">
+              天氣轉涼，肌膚開始變得乾燥，重點是調整油水平衡，避免過度清潔。
+            </p>
+            <p class="season-card-tip">重點：滋養精華油 × 柔潤乳霜。</p>
+            <a href="#" class="season-card-link">查看秋季推薦 →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 冬季卡片 -->
+      <div class="col-md-6">
+        <article class="season-card">
+          <div class="season-card-img-wrap">
+            <img src="images/Firefly_Winter · 冬季高效修復_修復面膜 × 高保濕霜.jpg" class="season-card-img" alt="冬季高效修復">
+          </div>
+          <div class="season-card-body">
+            <h3 class="season-card-title">Winter · 冬季高效修復</h3>
+            <p class="season-card-desc">
+              針對嚴重乾燥與粗糙肌膚，使用高濃度保濕與修復成分，強化整體肌膚防禦力。
+            </p>
+            <p class="season-card-tip">重點：修復面膜 × 高保濕霜。</p>
+            <a href="#" class="season-card-link">查看冬季推薦 →</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───── Footer：三等分 ───── -->
+<div class="container-fluid foot" id="foot">
+  <div class="row py-4">
+    <!-- 左：Contact -->
+    <div class="col-md-4 text-center">
+      <h4>Contact</h4>
+      <form>
+        <div class="form-group">
+          <input class="form-control" type="text" id="name" placeholder="username*">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" id="email" placeholder="xxxxx@example.com*">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="tel" id="phone" placeholder="09-xxxxxxxx*">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="Message" placeholder="Your Message*"></textarea>
+        </div>
+        <button type="button" class="btn btn-outline-secondary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- 中：社群 -->
+    <div class="col-md-4 text-center d-flex flex-column align-items-center justify-content-center">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+    <a href="#" target="_blank">
+      <img src="images/instagram.svg" alt="Instagram">
+    </a>
+    <a href="#" target="_blank">
+      <img src="images/facebook.svg" alt="Facebook">
+    </a>
+    <a href="#" target="_blank">
+      <img src="images/line.svg" alt="Line">
+    </a>
+  </div>
+      <p class="copyright mb-0">@botanieve_official</p>
+    </div>
+
+    <!-- 右：品牌資訊 -->
+    <div class="col-md-4 text-center text-md-right d-flex flex-column align-items-center align-items-md-end justify-content-center">
+      <h4>Botaniève</h4>
+      <p class="copyright mb-0">
+        Copyright &copy; 2025 Botaniève<br>
+        All Rights Reserved · by Daphne Mok
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Dropdown 行為（跟其他頁一致） -->
+<script>
+$(document).ready(function () {
+  var isTouchDevice = 'ontouchstart' in document.documentElement;
+
+  // 桌機：滑過顯示 dropdown（只在 ≥ 992px 時啟用）
+if (!isTouchDevice && $(window).width() >= 992) {
+  $('.navbar .dropdown').hover(
+    function () {
+      $(this).addClass('show');
+      $(this).find('.dropdown-menu').addClass('show');
+    },
+    function () {
+      $(this).removeClass('show');
+      $(this).find('.dropdown-menu').removeClass('show');
+    }
+  );
+}
+
+  // 點擊「關於我們 / 最新優惠」這類 dropdown 主連結
+  $('.navbar .dropdown > a').on('click', function (e) {
+    var href = $(this).attr('href');
+
+    if ($(window).width() >= 450) {
+      // ✅ 桌機：直接導頁到主頁（aboutus.html / news.html）
+      e.preventDefault();
+      window.location = href;
+    } else {
+      // ✅ 手機：只展開 / 收合 dropdown，不馬上跳頁
+      e.preventDefault();
+      var $parent = $(this).parent();
+      $parent.toggleClass('show');
+      $parent.find('.dropdown-menu').toggleClass('show');
+    }
+  });
+});
+</script>
+</body>
+</html>

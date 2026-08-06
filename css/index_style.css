@@ -1,0 +1,575 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color: #F7F6F3;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	
+}
+.topbar {
+  width: 100%;
+}
+.logo-header {
+	background-color: #E9ECE7;     /* 草本霧灰，可依需要調整 */
+	text-align: center;
+	padding: 16px 0;
+	z-index: 1040;                 /* 比 navbar 高一點 */
+	position: relative;  /* 你原本有 logo-header，這行可以加在原本定義裡 */
+}
+
+.logo-header .navbar-brand {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #7A6F60;
+}
+
+.logo-header .navbar-brand img {
+	display: block;
+	width: 110px;                   /* Logo 大小可自己改 */
+	height: auto;
+}
+
+.logo-header .navbar-brand span {
+	font-family: "Playfair Display","Noto Serif TC",serif;
+	font-size: 22px;
+	margin-left: 8px;
+}
+
+/* 讓 navbar 本身也在畫面置中 */
+/* 整體 navbar 外觀 */
+.navbar {
+  background-color: #A9BCA3 !important;              /* 苔蘚綠 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  min-height: 50px;
+}
+
+/* Logo 文字（如果 nav 裡面也有文字版 logo） */
+.navbar-brand {
+  font-family: "Playfair Display","Noto Serif TC",serif;
+  font-size: 22px;
+  color: #F7F6F3 !important;                         /* 月光白 */
+}
+
+/* 主要選單文字樣式 */
+.navbar-nav .nav-link {
+  color: #7A6F60 !important;                         /* 植物根系棕 */
+  font-family: "Montserrat","Noto Sans TC",sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  letter-spacing: 0.04em;
+  position: relative;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+/* hover：文字變淺、底色微亮 */
+.navbar-nav .nav-link:hover {
+  color: #F7F6F3 !important;                         /* 月光白 */
+  text-decoration: none;
+}
+
+/* active / focus：使用淡玫粉灰作為強調色 */
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #E4DAD3 !important;                         /* 淡玫粉灰 */
+}
+
+/* 小小的底線動畫（可刪掉，如果想更簡單） */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background-color: #F7F6F3;                         /* 月光白 */
+  transform: translateX(-50%);
+  transition: width .2s ease;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+}
+
+/* 讓整排選單在畫面中置中 */
+.navbar-nav {
+  margin: 0 auto;
+}
+
+/* dropdown 整體 */
+.navbar .dropdown-menu {
+    background-color: #F7F6F3;       /* 月光白：乾淨柔霧背景 */
+    border: none;
+    border-radius: 10px;
+    padding: 6px 0;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    margin-top: 8px;
+}
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 修正 Bootstrap 預設 hover 閃爍問題 */
+.navbar .dropdown-menu {
+    margin-top: 0;
+}
+/* dropdown item（正常狀態） */
+.navbar .dropdown-item {
+    color: #7A6F60 !important;           /* 與 navbar-nav .nav-link 一樣 */
+    font-size: 14px;
+    padding: 10px 18px;
+}
+
+/* hover 狀態 */
+.navbar .dropdown-item:hover {
+    background-color: #A0AE9E !important;;           /* 草本霧灰 */
+    color: #F7F6F3 !important;           /* hover 字色：月光白 */
+    text-decoration: none;
+}
+
+/* active（按下） */
+.navbar .dropdown-item:active,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item.active { /* 大地米駝 */
+    color: #E4DAD3 !important;            /* active 字色：淡玫粉灰 */
+}
+/* 手機版展開時讓選單向下佔滿寬度 */
+@media (max-width: 991.98px) {
+  .navbar .navbar-toggler {
+    margin-left: auto;   /* 推到右邊 */
+  }
+
+  .navbar .container {
+    justify-content: space-between !important;  /* 左右分散：Logo 左，按鈕右 */
+  }
+  .navbar-nav {
+    margin: 8px 0 4px;
+  }
+  .navbar-nav .nav-link {
+    padding: 8px 16px;
+   text-align: right !important;
+  }
+  .navbar-nav .nav-link::after {
+    content: none !important;
+  }
+
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    content: none !important;
+  }
+
+ /* Mobile dropdown-menu 靠右 */
+   .navbar .dropdown-menu {
+    position: static !important;   /* <-- 讓選單乖乖黏在按鈕下面，不會漂浮 */
+    width: auto !important;        /* <-- 不要 100px 寬 */
+    min-width: 140px !important;   /* <-- 你希望 dropdown 變窄 → 可以設定 140px */
+    margin-top: 0;
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: right;
+  }
+
+  .navbar .dropdown-item {
+    width: 100%;
+    text-align: right;
+    padding-right: 18px;
+  }
+}
+/*nav{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+nav ul{
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+nav ul li{
+	list-style-type: none;
+	float:left;
+	}
+nav ul li a{
+	width: 120px;
+	display: block;
+	padding: 10px;
+	color: #7A6F60;
+}
+nav ul li a:hover{
+	width: 120px;
+	display: block;
+	padding: 10px;
+	color: #F7F6F3;
+	text-decoration: none;
+}
+nav ul li a:active{
+	width: 120px;
+	display: block;
+	padding: 10px;
+	color: #E4DAD3;
+	text-decoration: none;
+}
+*/
+
+.cart-icon {
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+
+  background: rgba(233,236,231,0.75);   /* E9ECE7 淡霧灰綠 */
+  backdrop-filter: blur(6px);             /* 🔥 霧面玻璃效果 */
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 50%;                     /* 圓形 */
+  box-shadow: 0 4px 5px rgba(0,0,0,0.18); /* 柔和陰影 */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3000;
+  cursor: pointer;
+
+  transition: all .25s ease;              /* 動畫 */
+}
+/* hover 動畫：高級感放大 + 陰影更柔 */
+.cart-icon:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+.cart-icon img {
+  width: 30px;          /* icon 大小 */
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Slogan 區域排版 */
+#slogan {
+  background-image: url("../images/Firefly_nature  no product 942137.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  padding: 100px 20px;
+}
+
+/* slogan 文字本身你原本就有顏色設定，可以再補一點小樣式 */
+.slogan {
+  color: #7A6F60;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  display: inline-block;
+  padding: 10px 28px;
+  margin: 8px 0;
+  border-radius: 18px;
+  background: rgba(169,188,163,0.72);
+
+  backdrop-filter: blur(4px);
+}
+
+/* 讓中文主標稍微大一點 */
+#slogan h1.slogan {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* 英文副標略小一點 */
+#slogan p.slogan {
+  font-size: 16px;
+  opacity: 0.95;
+
+}
+
+/* 簡單淡入＋微微上移動畫 */
+#slogan .slogan {
+  opacity: 0;
+  animation: sloganFadeUp 0.7s ease-out forwards;
+}
+
+.bg-light{
+	background-color: #A9BCA3!important;
+}
+
+.pslogan {
+  font-family: "Playfair Display", serif;
+  color: #7A6F60;
+  letter-spacing: 0.03em;
+  line-height: 1.85;
+  max-width: 480px;
+}
+
+.pslogan-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #5F5A54; /* 深一階，聚焦標題 */
+}
+
+.pslogan-text {
+  font-size: 16px;
+  opacity: 0.9; /* 副文更柔和 */
+}
+
+.more-btn {
+    background-color: #A7B7B4 !important;
+    border-color: #A7B7B4 !important;
+    color: #ffffff !important;
+}
+
+/* hover */
+.more-btn:hover {
+    background-color: #95A7A4 !important; /* 深一點 */
+    border-color: #95A7A4 !important;
+}
+
+/* active / focus */
+
+.carouselExampleIndicators1{
+	margin: 100px;
+	padding: 100px;
+}
+/* Promotion Section */
+#promotion {
+  background-color: #E9ECE7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* 設定整行高度 */
+.promotion-container {
+  min-height: 550px; 
+  display: flex;
+  align-items: stretch; 
+}
+
+/* 圖片滿版裁切 */
+.promo-img-wrap {
+  overflow: hidden;
+  border-radius: 20px; /* ✨ 圓角 */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10); /* 柔霧陰影 */
+  height: 100%;
+}
+
+.promo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 標題包裝器：置中＋左右留距 */
+.promo-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+/* 基本圖示大小 */
+.xmas-icon-left,
+.xmas-icon-right {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+/* 左：極簡聖誕樹 */
+.xmas-icon-left {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%237A6F60' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2l4 6h-8l4-6zm0 6l6 8H6l6-8zm0 8v6'/%3E%3C/svg%3E");
+}
+
+/* 右：精品星星（非可愛風） */
+.xmas-icon-right {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%237A6F60' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2l1.6 4.8L18 8l-3.6 2.8L15 16l-3-1.8L9 16l.6-5.2L6 8l4.4-.2L12 2z'/%3E%3C/svg%3E");
+  
+}
+.xmas-branch {
+  width: 110px;
+  height: 26px;
+  margin: 14px auto 22px auto;
+  background-image: url("data:image/svg+xml,%3Csvg width='150' height='40' viewBox='0 0 150 40' fill='none' stroke='%237A6F60' stroke-width='1.2' stroke-linecap='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 20h140m-25-7l15 7-15 7m-85-7l-15 7 15 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+}
+
+/* 代理品牌區塊 */
+.brand-section {
+  background-color: #F7F6F3;
+}
+
+.brandp {
+  color: #7A6F60;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.brand-sub {
+  font-size: 16px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #A9BCA3;       /* 跟你網站氣質接近 */
+  margin-top: 4px;
+}
+
+/* 輪播外框 */
+.brand-carousel {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* 每一頁品牌 Logo 排列 */
+.brand-slide-wrap {
+  min-height: 120px;
+}
+
+/* Logo 圖片統一高度 */
+.brand-logo {
+  max-height: 60px;
+  margin: 0 30px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all .25s ease;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* 只針對品牌輪播的小圓點，不影響上面商品輪播 */
+.brand-carousel .carousel-indicators {
+  bottom: -10px;
+}
+
+.brand-carousel .carousel-indicators li {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #E9ECE7;
+  opacity: 1;
+}
+
+.brand-carousel .carousel-indicators .active {
+  background-color: #A9BCA3;
+}
+
+/* 左右箭頭縮小＋淡淡背景 */
+.brand-carousel .carousel-control-prev,
+.brand-carousel .carousel-control-next {
+  width: 40px;
+}
+
+.brand-carousel .carousel-control-prev-icon,
+.brand-carousel .carousel-control-next-icon {
+  background-size: 60% 60%;
+  background-color: rgba(233,236,231,0.85);
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+.carousel-indicators li{
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border-width: 0px;
+	background-color: #A9BCA3;
+}
+@keyframes sloganFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 手機版稍微縮小字級 */
+@media (max-width: 767.98px) {
+  #slogan h1.slogan {
+    font-size: 22px;
+  }
+  #slogan p.slogan {
+    font-size: 14px;
+  }
+  .promotion-container {
+    min-height: 400px;
+    flex-direction: column;
+  }
+  .promo-img {
+    max-height: 260px;
+  }
+  #social{
+    padding-top: 50px;
+	}
+  #copyright{
+	padding-top: 50px;
+  }
+  .cart-icon {
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .cart-icon img {
+    width: 25px;        /* 手機上可再微調大小 */
+  }
+  .brand-logo {
+    max-height: 46px;
+    margin: 10px 18px;
+  }
+}
+.brandp{
+	color: #7A6F60;
+}
+.bdp{
+	margin: 100px;
+	padding: 100px;
+}
+.form-group-text{
+	height: 100%;
+	width:  100%;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* icon 間距 */
+  margin: 15px 0;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+#Message{
+	height: 100%;
+	width:  100%;
+}
+.copyright {
+	font-size: 13px;
+}
+.foot {
+	background-color: #A9BCA3;
+	color: #7A6F60
+}
